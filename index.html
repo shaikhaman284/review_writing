@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Life Pharmacy — Share Your Experience</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Ambient background -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <main class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-wrap">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect x="11" y="2" width="6" height="24" rx="3" fill="white"/>
+            <rect x="2" y="11" width="24" height="6" rx="3" fill="white"/>
+          </svg>
+        </div>
+        <div>
+          <p class="logo-sub">LIFE</p>
+          <h1 class="logo-name">Pharmacy</h1>
+        </div>
+      </div>
+      <p class="tagline">Your health, our care — always.</p>
+    </header>
+
+    <!-- Step 1: Star Rating -->
+    <section class="card step-card" id="step-rating">
+      <p class="step-label">STEP 1 OF 3</p>
+      <h2 class="card-title">How was your visit?</h2>
+      <p class="card-sub">Tap to rate your experience</p>
+
+      <div class="stars-row" id="starsRow">
+        <button class="star" data-val="1" aria-label="1 star">★</button>
+        <button class="star" data-val="2" aria-label="2 stars">★</button>
+        <button class="star" data-val="3" aria-label="3 stars">★</button>
+        <button class="star" data-val="4" aria-label="4 stars">★</button>
+        <button class="star" data-val="5" aria-label="5 stars">★</button>
+      </div>
+      <p class="rating-label" id="ratingLabel">—</p>
+    </section>
+
+    <!-- Step 2: Review Selection -->
+    <section class="card step-card hidden" id="step-review">
+      <p class="step-label">STEP 2 OF 3</p>
+      <h2 class="card-title">Pick your review</h2>
+      <p class="card-sub">Swipe to browse · tap to select</p>
+
+      <div class="carousel-wrap">
+        <div class="carousel" id="carousel">
+          <!-- Injected by JS -->
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+
+      <div class="custom-review-wrap">
+        <p class="or-divider"><span>or write your own</span></p>
+        <textarea id="customReview" placeholder="Type your own review here..."></textarea>
+      </div>
+    </section>
+
+    <!-- Step 3: Submit -->
+    <section class="card step-card hidden" id="step-submit">
+      <p class="step-label">STEP 3 OF 3</p>
+      <h2 class="card-title">Almost there!</h2>
+      <p class="card-sub">Your review is ready to post</p>
+
+      <div class="review-preview" id="reviewPreview"></div>
+
+      <div class="submit-steps">
+        <div class="submit-step">
+          <div class="step-num">1</div>
+          <p>Tap <strong>Copy & Open Google</strong> below</p>
+        </div>
+        <div class="submit-step">
+          <div class="step-num">2</div>
+          <p>Google Maps opens — <strong>paste</strong> the copied text</p>
+        </div>
+        <div class="submit-step">
+          <div class="step-num">3</div>
+          <p>Hit <strong>Post</strong> and you're done! 🎉</p>
+        </div>
+      </div>
+
+      <button class="btn-submit" id="btnSubmit">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        Copy & Open Google Maps
+      </button>
+      <p class="submit-note">Review text is copied automatically — just paste it!</p>
+    </section>
+
+    <!-- Success -->
+    <section class="card step-card hidden" id="step-success">
+      <div class="success-icon">🌟</div>
+      <h2 class="card-title">Thank you!</h2>
+      <p class="card-sub">Your review means the world to us.<br>See you next time at Life Pharmacy!</p>
+      <button class="btn-another" id="btnAnother">Submit Another Review</button>
+    </section>
+
+    <!-- Nav buttons -->
+    <div class="nav-btns" id="navBtns">
+      <button class="btn-back hidden" id="btnBack">← Back</button>
+      <button class="btn-next hidden" id="btnNext">Continue →</button>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
