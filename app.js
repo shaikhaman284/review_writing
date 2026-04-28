@@ -3,7 +3,7 @@
    Place ID: 0x3bd6a5007b718797:0xa7bcf3229361a486
    ============================================= */
 
-const PLACE_ID = "ChIJl4cbe0ClNjkRhqSBkyLzvKc";
+const PLACE_ID = "0x3bd6a5007b718797:0xa7bcf3229361a486";
 // Google write-review deep link
 const REVIEW_BASE = `https://search.google.com/local/writereview?placeid=${PLACE_ID}`;
 
