@@ -86,6 +86,18 @@ html, body {
 .header {
   text-align: center;
   padding: 24px 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.header-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--green-mid);
+  box-shadow: var(--shadow-md);
 }
 .logo-wrap {
   display: inline-flex;
@@ -95,7 +107,6 @@ html, body {
   padding: 14px 24px;
   border-radius: 60px;
   box-shadow: var(--shadow-md);
-  margin-bottom: 12px;
 }
 .logo-icon {
   width: 48px; height: 48px;
@@ -155,8 +166,45 @@ html, body {
   color: var(--text-mid);
 }
 .showcase-media {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
+  width: 100%;
+}
+.photo-carousel-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.photo-carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+.photo-carousel::-webkit-scrollbar {
+  height: 4px;
+}
+.photo-carousel::-webkit-scrollbar-track {
+  background: rgba(20,163,97,0.1);
+  border-radius: 2px;
+}
+.photo-carousel::-webkit-scrollbar-thumb {
+  background: var(--green-mid);
+  border-radius: 2px;
+}
+.gallery-photo {
+  min-width: 220px;
+  height: 220px;
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(20,163,97,0.12);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
 }
 .brand-logo-wrap {
   width: 100%;
@@ -175,14 +223,6 @@ html, body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-}
-.gallery-photo {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 18px;
-  border: 1px solid rgba(20,163,97,0.12);
-  box-shadow: var(--shadow-sm);
 }
 @media (max-width: 420px) {
   .photo-grid {
