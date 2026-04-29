@@ -91,14 +91,6 @@ html, body {
   align-items: center;
   gap: 12px;
 }
-.header-logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--green-mid);
-  box-shadow: var(--shadow-md);
-}
 .logo-wrap {
   display: inline-flex;
   align-items: center;
@@ -127,6 +119,17 @@ html, body {
   font-size: 22px;
   color: white;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.inline-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.8);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 .tagline {
   font-size: 13px;
